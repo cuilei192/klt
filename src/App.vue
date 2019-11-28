@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Footer from './components/FooterBar.vue'
+  import Footer from './components/FootBar.vue'
   export default {
     el: 'App',
     components: {
