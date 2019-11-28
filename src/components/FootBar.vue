@@ -28,10 +28,10 @@
         data(){
             return{
                 selected:'main',
-                img_index:"src/assets/img_index.png",
-                img_order:"src/assets/img_order.png",
-                img_sort:"src/assets/img_sort.png",
-                img_mine:"src/assets/img_mine.png"
+                img_index:"static/image/public/img_index.png",
+                img_order:"static/image/public/img_order.png",
+                img_sort:"static/image/public/img_sort.png",
+                img_mine:"static/image/public/img_mine.png"
             }
     },
     methods: {

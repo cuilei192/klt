@@ -9,11 +9,11 @@
 </template>
 
 <script>
-  import Footer from './components/FootBar.vue'
+  import FootBar from './components/FootBar.vue'
   export default {
     el: 'App',
     components: {
-      'footer-bar': Footer
+      'footer-bar': FootBar
     },
     methods: {
       HandleClick: function () {

@@ -1,0 +1,176 @@
+[v-cloak] {
+  display: none !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #333;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+a:active, a:hover, a:focus {
+  text-decoration: none;
+  outline-width: 0;
+}
+
+input, textarea {
+  border: none;
+}
+
+input:focus, textarea:focus {
+  outline: none !important;
+  border: 0px;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+.middle {
+  word-break: break-all;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.middleView {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+
+.middleViewS {
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.middleViewE {
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.middleViewA {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.middleViewAS {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.middleViewAE {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.middleViewB {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: block;
+}
+
+.middleViewBS {
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: block;
+}
+
+.middleViewBE {
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: block;
+}
+
+.centerView {
+  justify-content: center;
+  display: flex;
+}
+
+.centerWidthView {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.allCenterView {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.allCenterWidthView {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
