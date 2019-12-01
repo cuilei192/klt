@@ -108,6 +108,14 @@
         </div>
 
       </div>
+
+      <div class="middleView" style="margin-top: 0.156rem;background: #eeeeee;">
+      </div>
+      <!-- 列表 -->
+      <div class="middleView">
+        <div class="middleView" style=""></div>
+      </div>
+      <!-- END 列表 -->
     </div>
     <footer-bar></footer-bar>
   </div>
