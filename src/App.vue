@@ -11,7 +11,6 @@
 <script>
   import FootBar from './components/FootBar.vue'
   export default {
-    el: 'App',
     components: {
       'footer-bar': FootBar
     },

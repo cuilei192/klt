@@ -7,6 +7,7 @@ import router from './router';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import axios from 'axios';
+import 'lib-flexible/flexible.js'
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios; //全局注册，使用方法为:this.$http
