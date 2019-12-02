@@ -3,7 +3,7 @@
     <div class="middle">
       <!-- 下载 -->
       <template v-if="showDownFlag == true">
-        <div class="middleView" style="position: fixed;height: 1.016rem;">
+        <div class="middleView" style="position: fixed;height: 1.016rem;z-index: 1;">
           <div class="middleViewAS" style="width: 70%;background: #333;">
             <img style="width: 0.53rem;margin-left: 0.22rem;" src="../../static/image/home/cancel.png" @click="closeDown()">
             <img style="width: 0.81rem;margin-left: 0.125rem;" src="../../static/image/public/logo.png">
@@ -112,9 +112,9 @@
       <div class="middleView" style="margin-top: 0.156rem;background: #eeeeee;">
       </div>
       <!-- 列表 -->
-      <div class="middleView">
-        <div class="middleView" style="">
-          
+      <div class="middleView" style="">
+        <div class="middleViewS" style="margin-top: 0.438rem;">
+          <span style="margin-left: 0.469rem;font-size: 0.417rem;">热卖商品</span>
         </div>
       </div>
       <!-- END 列表 -->
