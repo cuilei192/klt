@@ -113,7 +113,9 @@
       </div>
       <!-- 列表 -->
       <div class="middleView">
-        <div class="middleView" style=""></div>
+        <div class="middleView" style="">
+          
+        </div>
       </div>
       <!-- END 列表 -->
     </div>
