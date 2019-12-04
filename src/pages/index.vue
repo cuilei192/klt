@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="middleView" style="width: 14%;">
-            <img class="middleView" src="../../static/image/public/kefu.png" style="width: 0.438rem;height: 0.422rem;">
+            <img class="middleView" src="../../static/image/home/kefu.png" style="width: 0.438rem;height: 0.422rem;">
             <span class="middleView" style="color: #fff;font-size: 0.25rem;">客服</span>
           </div>
         </div>
