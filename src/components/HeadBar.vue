@@ -7,7 +7,7 @@
       <span style="font-size: 0.375rem">商品分类</span>
     </div>
     <div class="middleViewAE" style="width: 15%">
-      <img src="../../static/image/home/kefu.png" style="width: 0.406rem;height: 0.391rem;margin-right: 0.422rem;"/>
+      <img src="../../static/image/order/kefu.png" style="width: 0.406rem;height: 0.391rem;margin-right: 0.422rem;"/>
     </div>
   </div>
 </template>
