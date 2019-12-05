@@ -66,7 +66,7 @@
         </template>
       </div>
     </div>
-    <div style="background: #EEEEEE;height: 5rem"></div>
+    <div style="background: #EEEEEE;height: 2.3rem"></div>
     <footer-bar></footer-bar>
   </div>
 </template>
