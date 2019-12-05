@@ -12,44 +12,15 @@
 
       <!-- 热门分类项-->
       <div class="middleViewAS" style="background-color: #fff;padding:0 0.4rem 0.4rem 0.4rem;">
-        <div class="middleView" style="width: 25%;">
-          <div class="middleView" style="width: 1.8rem;">
-            <img src="../../static/image/order/brand_150.png" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
-            <a href="#" style="font-size: 0.312rem;margin-top: 0.18rem;">支付宝</a>
+        <template v-for="(value,index) in hotOrderArr">
+          <div class="middleView" style="width: 25%;">
+            <div class="middleView" style="width: 1.8rem;">
+              <img :src="value.img" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
+              <a href="#" style="font-size: 0.312rem;margin-top: 0.18rem;" v-text="value.name"></a>
+            </div>
           </div>
-        </div>
-        <div class="middleView" style="width: 25%;">
-          <div class="middleView" style="width: 1.8rem;">
-            <img src="../../static/image/order/brand_150.png" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
-            <a href="#" style="font-size: 0.312rem;margin-top: 0.18rem;">苹果品牌</a>
-          </div>
-        </div>
-        <div class="middleView" style="width: 25%;">
-          <div class="middleView" style="width: 1.8rem;">
-            <img src="../../static/image/order/brand_150.png" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
-            <span style="font-size: 0.312rem;margin-top: 0.18rem;">金山游戏</span>
-          </div>
-        </div>
-        <div class="middleView" style="width: 25%;">
-          <div class="middleView" style="width: 1.8rem;">
-            <img src="../../static/image/order/brand_150.png" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
-            <a href="#" style="font-size: 0.312rem;margin-top: 0.18rem;">网易游戏</a>
-          </div>
-        </div>
-        <div class="middleView" style="width: 25%;">
-          <div class="middleView" style="width: 1.8rem;">
-            <img src="../../static/image/order/brand_150.png" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
-            <span style="font-size: 0.312rem;margin-top: 0.18rem;">网易游戏</span>
-          </div>
-        </div>
-        <div class="middleView" style="width: 25%;">
-          <div class="middleView" style="width: 1.8rem;">
-            <img src="../../static/image/order/brand_150.png" style="width: 1.4rem;height:1.4rem;margin-top: 0.4rem;">
-            <a href="#" style="font-size: 0.312rem;margin-top: 0.18rem">网易游戏</a>
-          </div>
-        </div>
+        </template>
       </div>
-
       <!--全部分类-->
 
       <div class="middleViewA" style="height: 1.20rem;">
@@ -61,7 +32,7 @@
       <div class="middleViewAS" style="background-color: #fff">
         <template v-for="(value,index) in allOrderArr">
           <div class="middleViewA allOrderItemBorder" :class="{'hasBorderRight':index % 4 != 3}">
-            <a href="#" v-text=value.orderName></a>
+            <a href="#" v-text=value.name></a>
           </div>
         </template>
       </div>
@@ -84,30 +55,30 @@
     data(){
       return {
         hotOrderArr: [
-          {"routUrl": "/", "img_src": "../../static/image/order/brand_150.png"},
-          {"routUrl": "/", "img_src": "../../static/image/order/brand_150.png"},
-          {"routUrl": "/", "img_src": "../../static/image/order/brand_150.png"},
-          {"routUrl": "/", "img_src": "../../static/image/order/brand_150.png"},
-          {"routUrl": "/", "img_src": "../../static/image/order/brand_150.png"},
-          {"routUrl": "/", "img_src": "../../static/image/order/brand_150.png"}
+          {"routUrl": "/", "img": "../../static/image/order/brand_150.png","name": "支付宝"},
+          {"routUrl": "/", "img": "../../static/image/order/brand_150.png","name": "苹果品牌"},
+          {"routUrl": "/", "img": "../../static/image/order/brand_150.png","name": "金山游戏"},
+          {"routUrl": "/", "img": "../../static/image/order/brand_150.png","name": "网易游戏"},
+          {"routUrl": "/", "img": "../../static/image/order/brand_150.png","name": "盛大在线"},
+          {"routUrl": "/", "img": "../../static/image/order/brand_150.png","name": "网易战网"}
         ],
         allOrderArr: [
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
-          {"routUrl": "/", "orderName": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
+          {"routUrl": "/", "name": "实物代购"},
         ],
       }
     }
