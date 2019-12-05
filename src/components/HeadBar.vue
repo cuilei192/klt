@@ -1,5 +1,5 @@
 <template>
-  <div class="middleView" style="height: 1.016rem;z-index: 1;background: #FFFFFF">
+  <div class="middleView" style="height: 1.2rem;z-index: 1;background: #FFFFFF">
     <div class="middleViewAS" style="width: 15%">
       <img class="middleView" src="../../static/image/public/klt_bak_arrow.png" style="width: 0.25rem;height: 0.422rem;margin-left: 0.422rem;"/>
     </div>

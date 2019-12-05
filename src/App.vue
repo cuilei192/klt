@@ -2,7 +2,6 @@
   <div id="app">
     <div class="content-div">
         <router-view/>
-          <footer-bar></footer-bar>
     </div>
 
   </div>
