@@ -131,22 +131,25 @@
           <span style="margin-left: 0.469rem;font-size: 0.313rem;">热卖商品</span>
           <span style="font-size: 0.313rem;color: #999999;margin-left: 0.1rem;"> · HOT GOODS</span>
         </div>
-        <div class="middleView" style="margin-top: 0.313rem;">
-          <template v-for="(value,index) in goodList">
-            <div class="middleView" style="margin: 0 0.5rem 0.25rem;">
-              <div class="middleViewS" style="width: 30%;">
-                <img :src="value.img" style="width: 2.031rem;height: 1.875rem;border-radius: 0.188rem;">
-              </div>
-              <div class="middleViewS" style="width: 70%;">
-                <div class="middleViewS" style="margin-top: 0.2rem;">
-                  <span style="font-size: 0.313rem;" v-text="value.name"></span>
+        <div class="middleViewS" style="margin-top: 0.313rem;margin-left: 0.5rem;overflow:scroll;">
+          <mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :autoFill="false" ref="loadmore">
+            <template v-for="(value,index) in goodList">
+              <div class="middleView" style="margin-bottom: 0.25rem;">
+                <div class="middleViewS" style="width: 30%;">
+                  <img :src="value.img" style="width: 2.031rem;height: 1.875rem;border-radius: 0.188rem;">
                 </div>
-                <div class="middleViewS" style="margin-top: 0.5rem;">
-                  <span style="font-size: 0.313rem;color: #ef504a;" v-text="$options.filters.showPrice(value.money)"></span>
+                <div class="middleViewS" style="width: 70%;">
+                  <div class="middleViewS" style="margin-top: 0.2rem;">
+                    <span style="font-size: 0.313rem;" v-text="value.name"></span>
+                  </div>
+                  <div class="middleViewS" style="margin-top: 0.5rem;">
+                    <span style="font-size: 0.313rem;color: #ef504a;" v-text="$options.filters.showPrice(value.money)"></span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </template>
+            </template>
+          </mt-loadmore>
+
         </div>
       </div>
       <!-- END 列表 -->
@@ -159,21 +162,23 @@
   import footer from '../components/FootBar.vue'
   import '../../static/css/common.css' /*引入公共样式*/
   import { Swipe, SwipeItem } from 'mint-ui';
+  import { Loadmore } from 'mint-ui';
 
-  // Vue.component(Swipe.name, Swipe);
-  // Vue.component(SwipeItem.name, SwipeItem);
   export default {
       name: "home",
       components: {
           'footer-bar': footer,
           'Swipe.name': Swipe,
-          'SwipeItem.name': SwipeItem
+          'SwipeItem.name': SwipeItem,
+          'Loadmore.name': Loadmore
       },
 
       data() {
           return {
               banner_1: '../../static/image/home/banner1.jpg',
               showDownFlag: true,//是否显示头部下载栏
+              allLoaded: false,
+              loadTime:  0,
               goodList: [
                   {
                       img: '../../static/image/home/alipay.jpg',
@@ -193,11 +198,48 @@
           //关闭下载
           closeDown: function () {
               this.showDownFlag = false;
+          },
+          // 加载更多数据
+          loadBottom: function () {
+              let that = this;
+              that.$refs.loadmore.onBottomLoaded();
+              that.getGoods();
+              if(that.loadTime >= 6){
+                  that.allLoaded = true;// 若数据已全部获取完毕
+              }
+          },
+          //获取数据
+          getGoods: function () {
+              let that = this;
+              let temp = [
+                  {
+                      img: '../../static/image/home/alipay.jpg',
+                      name: '支付宝红包充值100元',
+                      money: '15.95'
+                  },
+                  {
+                      img: '../../static/image/home/yypay.jpg',
+                      name: '多玩平台Y币充值100元',
+                      money: '15.95'
+                  }
+              ];
+              that.goodList = that.goodList.concat(temp);
+              that.loadTime ++;
           }
       },
       filters: {
           showPrice (money) {
               return  '$'+money+' USD'
+          }
+      },
+      watch: {
+          loadTime (newTime,oldTime){
+              // let that = this;
+              console.log('newTime:'+newTime);
+              console.log('oldTime:'+oldTime);
+              if(this.loadTime === 7){
+                  console.log('goodList长度：'+ this.goodList.length);
+              }
           }
       }
   }
