@@ -149,7 +149,6 @@
               </div>
             </template>
           </mt-loadmore>
-
         </div>
       </div>
       <!-- END 列表 -->
@@ -245,6 +244,6 @@
   }
 </script>
 
-<style scoped>
+<style>
 
 </style>
