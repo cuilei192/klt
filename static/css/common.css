@@ -175,6 +175,18 @@ textarea {
 }
 
 
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #cbc7cd;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #cbc7cd;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #cbc7cd;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #cbc7cd;
+}
 
 
 
