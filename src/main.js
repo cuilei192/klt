@@ -8,12 +8,19 @@ import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import axios from 'axios';
 import 'lib-flexible/flexible.js'
+// import SlideVerify from 'vue-monoplasty-slide-verify';
+
+// import PuzzleVerification from 'vue-puzzle-verification'
+
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios; //全局注册，使用方法为:this.$http
 
 Vue.use(Mint);
 Vue.use(Vuex);
+// Vue.use(SlideVerify);
+// Vue.use(PuzzleVerification);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

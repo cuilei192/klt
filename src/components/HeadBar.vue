@@ -7,7 +7,7 @@
       <span style="font-size: 0.375rem" v-text="title"></span>
     </div>
     <div class="middleViewAE" style="width: 15%">
-      <img src="../../static/image/order/kefu.png" style="width: 0.406rem;height: 0.391rem;margin-right: 0.422rem;"/>
+      <img src="../../static/image/public/kefu.png" style="width: 0.406rem;height: 0.391rem;margin-right: 0.422rem;"/>
     </div>
   </div>
 </template>
