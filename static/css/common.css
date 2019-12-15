@@ -132,6 +132,24 @@ textarea {
   display: block;
 }
 
+.middleViewCE {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  display: flex;
+}
+
+.middleViewCS {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+}
+
 .centerView {
   justify-content: center;
   display: flex;
