@@ -7,7 +7,7 @@
       <div class="middleView" style="margin:1.563rem 0.422rem 0rem;border-bottom: 1px solid #c7c7cd;">
         <input class="middleViewAS" style="font-size: 0.406rem;color: #cbc7cd;padding-bottom: 0.156rem;" placeholder="用户名/电子邮件地址/海外电话" >
       </div>
-      <div class="middleView" style="margin:1.563rem 0.422rem 0rem;border-bottom: 1px solid #c7c7cd;position: relative">
+      <div class="middleView" style="margin:0.438rem 0.422rem 0rem;border-bottom: 1px solid #c7c7cd;position: relative">
         <input class="middleViewAS" :type="showPassword == false ? 'password' : 'text'" style="font-size: 0.406rem;color: #cbc7cd;padding-bottom: 0.156rem;" placeholder="请输入密码" >
         <img :src="showPassword == false ? '../../static/image/login/close_eye.png' : '../../static/image/login/open_eye.png'" style="width: 0.391rem;position: absolute;right:0;" @click="setShowPass">
       </div>

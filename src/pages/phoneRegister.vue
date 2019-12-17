@@ -27,21 +27,15 @@
         </template>
       </div>
     </div>
-
-    <div class="middleView" style="margin: 0.438rem 0.422rem 0rem;font-size: 0.375rem;">
-      <div class="middleViewAS" style="width: 70%;">
-        <span style="font-size: 0.406rem;color: #cbc7cd;" v-text="errorMsg"></span>
-      </div>
-      <div class="middleViewAE" style="width: 30%;">
-        <span style="font-size: 0.406rem;color: #22c064;">快速注册</span>
-      </div>
+    <div class="middleViewAS" style="margin: 0.438rem 0.422rem 0rem;font-size: 0.375rem;">
+      <span style="font-size: 0.406rem;color: #cbc7cd;" v-text="errorMsg"></span>
     </div>
-
-    <div class="middleViewA" style="margin: 1.563rem 0.422rem 0rem;height: 1.25rem;background: #22c064;border-radius:0.625rem;" @click="login">
-      <span style="color: #fff;font-size: 0.438rem;">登录</span>
+    <div class="middleViewAS" style="margin: 0.4rem 0.422rem 0rem;">
+      <input type="checkbox" name="checkbox" v-model="agree" @click="select">
+      <span style="font-size: 0.375rem;color: #aaa8a9;margin-left: 0.2rem;">我已看过并同意《用户协议》</span>
     </div>
-    <div class="middleView" style="margin-top: 0.359rem;" @click="openLogin">
-      <span style="color: #aaa8a9;font-size: 0.406rem;">账户密码登录</span>
+    <div class="middleViewA" style="margin: 1.563rem 0.422rem 0rem;height: 1.25rem;background: #22c064;border-radius:0.625rem;" @click="register">
+      <span style="color: #fff;font-size: 0.438rem;">注册</span>
     </div>
 
   </div>
@@ -52,18 +46,18 @@
     import header from '../components/HeadBar.vue';
     import '../../static/css/common.css' /*引入公共样式*/
     export default {
-        name: "smslogin",
+        name: "phoneRegister",
         components: {
             'header-bar': header,
         },
         data() {
             return {
-                title: '快捷登录',
+                title: '手机注册',
                 getCodeIng: false,
                 firstGetCode: true,
                 time: 60,
-                errorMsg: '',
-
+                agree: false,
+                errorMsg: ''
             }
 
         },
@@ -89,19 +83,17 @@
                     }
                 },1000);
             },
-            //跳转账号密码登录页面
-            openLogin: function () {
-                // this.msg = '验证失败，您需要把拼图拖到指定的位置范围';
 
-                // this.showSlide = false;
+            //勾选用户协议
+            select: function () {
+                this.agree = !this.agree;
             },
-            //登录
-            login: function () {
-                this.showSlide = true;
-            },
-            //跳转短信登录
-            openSMSLogin: function () {
-
+            //注册
+            register: function () {
+                if(!!this.agree === false){
+                    alert('请勾选同意《用户协议》');
+                    return false;
+                }
             },
             //跳转国际区号选择页面
             openCountry: function () {
